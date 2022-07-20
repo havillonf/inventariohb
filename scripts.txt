@@ -1,0 +1,30 @@
+*******tb_empresa*******
+
+INSERT INTO tb_empresa (emp_nome, emp_cnpj, emp_senha) VALUES ("", "", "")
+
+SELECT * FROM tb_empresa WHERE emp_cnpj = "" AND emp_senha = ""
+
+
+*******tb_fornecedor*******
+
+INSERT INTO tb_fornecedor (for_nome, for_cidade, for_bairro, for_logradouro, for_endereco, for_numero, for_complemento, for_cnpj) VALUES ("", "", "", "", "", 0, "", "")
+
+SELECT for_id, for_nome, for_cidade, for_bairro, for_logradouro, for_endereco, for_numero, for_complemento, for_cnpj FROM tb_fornecedor INNER JOIN tb_emp_for ON tb_fornecedor.for_id = tb_emp_for.for_id INNER JOIN tb_empresa ON tb_emp_for.emp_id = tb_empresa.emp_id WHERE tb_empresa.emp_cnpj = ""
+
+UPDATE tb_fornecedor SET for_nome = "", for_cidade = "", for_bairro = "", for_logradouro = "", for_endereco = "", for_numero = 0, for_complemento = "", for_cnpj = "" WHERE for_id = 0
+
+
+*******tb_emp_for*******
+
+INSERT INTO tb_emp_for (emp_id, for_id) VALUES (0,0)
+
+
+*******tb_produtos*******
+
+INSERT INTO tb_produtos (pro_nome, pro_preco, pro_quantidade, ef_id) VALUES ("", 0.0, 0, 0)
+
+SELECT pro_id, pro_nome, pro_preco, pro_quantidade, FROM tb_produtos INNER JOIN tb_emp_for ON tb_produtos.ef_id = tb_emp_for.ef_id WHERE tb_emp_for.emp_cnpj = ""
+
+UPDATE tb_produtos SET pro_nome = "", pro_preco = 0.0, pro_quantidade = 0, ef_id = 0 WHERE pro_id = 0
+
+DELETE FROM tb_produtos WHERE pro_id = 0

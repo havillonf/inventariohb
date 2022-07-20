@@ -1,0 +1,79 @@
+.cnpj, .senha, a, button{
+	outline: 0 !important;
+	border-bottom-color: #6c757d;
+	transition: linear .2s;
+}
+
+.cnpj:focus, .senha:focus{
+	border-bottom-color: #ffc107;
+}
+
+.font-15{
+	font-size: 1.5em;
+}
+
+.formulario{
+	background-color: white;
+	padding-top: 2%;
+	padding-bottom: 4%;
+	border-radius: 8px; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.inputlogin{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.nav-hover{
+	transition: ease .5s!important;
+	border-bottom: 1px solid transparent;
+}
+
+.nav-hover:hover{
+	border-color: #ffc107;
+}
+
+.color-yellow-hover:hover{
+	color: #ffc107!important;
+}
+
+.page-footer{
+	background-color: #ffc107;
+}
+
+.div-dados div{
+	border:1px solid #ffc107;
+	border-radius: 6px;
+}
+
+.div-dados div::after{
+	content: "";
+	padding: 0 50%;
+	border-bottom: 4px solid #ffc107;
+	border-radius: 6px;
+}
+
+.footer-b{
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	transform: translate(0, -100%);
+	width: 100%;
+}
+
+.footer{
+	width: 100%;
+}
+
+.btn-outline-warning:hover{
+	color: white!important;
+}
+
+.cc{
+	height: 70vh;
+	overflow: scroll;
+}
